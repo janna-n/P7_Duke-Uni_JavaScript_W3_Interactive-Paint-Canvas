@@ -1,0 +1,17 @@
+<div>
+<hr>
+  
+  <h1>Let's get painting!</h1>
+  
+  <p>Canvas Size: <input type="text" id="inputbox" placeholder="Width" onchange="setWidth(this.value)" /> <input type="text" id="inputbox" placeholder="Height" onchange="setHeight(this.value)" /></p>
+  <p>Brush color: <input type="color" value="#000" id="colorinput" oninput="changeColor(this.value)"></p>
+  <p>Brush size: <input type="range" min="1" max="50" value="25" id="sizeInput" oninput="resizeBrush(this.value)"> <output id="sizeOutput">25</output></p>
+  <p><input type="button" id="clear" value="Clear Canvas" onclick="clearCanvas()" /></p>
+  
+  <canvas id="paintingcanvas" onmousedown="startPaint()" onmousemove="doPaint(event.offsetX,event.offsetY)" onmouseup="endPaint()" ></canvas>                                                 
+<!-- event.offsetX,event.offsetY is the current position of the mouse within the canvas no matter where it is positioned on the webpage. -->  
+  
+  
+<br>
+<hr>
+</div>
